@@ -1,0 +1,42 @@
+<html>
+<head>
+<script src="jquery-3.2.1.js"></script>
+<script>
+$(document).ready(function(){
+$('.already a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+});
+</script>
+</head>
+<body>
+<link rel=""><link rel="stylesheet" type="text/css" href="login.css">
+<div class="content">
+  <form action="#" method="POST" class="register-form">
+  <div class="title">SignUp on VegE</div>
+ 
+	<input type="text" name="username"  maxlength=50 min=10  placeholder="E-mail" value="<?php if(isset($_POST['username'])) {echo $_POST['username'];} ?>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+  
+	<input type="password" name="password"  maxlength=25 min=6  placeholder="Password" value="<?php if(isset($_POST['password'])) {echo $_POST['password'];} ?>" pattern=".{6,}" minlength=6 required>
+	
+	<input type="text" name="name" value="<?php if(isset($_POST['name'])) {echo $_POST['name'];} ?>" maxlength=25 min=10 placeholder="Full Name" required>
+
+	<input type="number" name="mobile" value="<?php if(isset($_POST['mobile'])) {echo $_POST['mobile'];} ?>" maxlength=10 minlength=10  placeholder="Mobile no."  pattern="[0-9]{2,}" minlength=10 required>
+  
+	<input type="checkbox" id="rememberMe"/>
+	<label for="rememberMe"></label><span>I have read and agree to the <a href="#">Terms of Use </a></span>
+	<input type="submit" name="signup" value="Create Account" class="button">
+	<div class="already">Already have an account? <a href="#">Sign In</a></div>
+  </form>
+  
+  <form action="#" method="POST" class="login-form">
+  <div class="title">Login to VegE</div>
+  <input type="text" name="username"  maxlength=50 min=10  placeholder="E-mail" value="<?php if(isset($_POST['username'])) {echo $_POST['username'];} ?>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+  <input type="password" placeholder="Password"/>
+  <input type="submit" name="signup" value="Create Account" class="button">
+  <div class="already">New User? Create an account <a href="#">Sign Up</a></div>
+  </form>
+</div>
+
+</body>
+</html>

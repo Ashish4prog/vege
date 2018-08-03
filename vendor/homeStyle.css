@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+}
+
+.title {
+    background-color: rgb(25, 202, 84);
+}
+
+ul {
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+.body-container {
+    display: flex;
+}
+
+nav {
+    background-color: #DDDDDD;
+    width: 180px;
+    box-sizing: border-box;
+}
+
+.main-container {
+    column-count: 4;
+    display: flex;
+    padding: 10px;
+}
+
+header {
+    background-color: rgb(25, 202, 84);
+}
+
+header * {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0px 15px 0px 0px;
+    font-size: 24px;
+    color: white;
+    text-transform: capitalize;
+}
+
+nav ul {
+    padding: 40px 0px;
+}
+
+.active {
+    background-color: lawngreen;
+}
+
+nav ul li {
+    border-bottom: 1px solid #777777;
+    padding: 5px 0;
+}
+
+nav ul li a {
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+p {
+    margin: 0;
+}
+
+.header-content {
+    float: right;
+}
+
+.new-vegetable {
+    cursor: pointer;
+}
+
+.modify {
+    float: right;
+    display: inline-flex;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.vegetable-window,
+.new-vegetable {
+    height: fit-content;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.vegetable-name {
+    font-size: 24px;
+}
+
+.margin {
+    margin-top: 0px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    margin-left: 0px;
+}
+
+.addveg {
+    border: none;
+    box-shadow: 0px 0px 0px 0px;
+}
+
+.margin-left {
+    margin-left: 5px;
+}
+
+.modify_rem {
+    float: right;
+    display: inline-flex;
+    text-align: center;
+    margin-top: 10px;
+    padding: 11px;
+}
+
+.vendor_name,
+.vendor_name:hover {
+    text-decoration: none!important;
+    color: #ffffff;
+    display: inline-block;
+}
+
+
+/* Tooltip container */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Tooltip text */
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+/* Tooltip arrow */
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
